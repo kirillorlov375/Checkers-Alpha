@@ -11,7 +11,6 @@ public class TurnsHandler : NetworkBehaviour
     protected const string BLACK_WIN = "Победитель: Тёмный!";
 
     public bool WhiteTurn { get; protected set; }
-    //public List<GameObject> ForcedPieces { get; } = new List<GameObject>();
     public List<Move> Moves { get; protected set; } = new List<Move>();
     protected List<Player> Players { get; set; } = new List<Player>();
     protected PlayerPiecesHandler piecesHandler = null;
@@ -51,7 +50,6 @@ public class TurnsHandler : NetworkBehaviour
     protected virtual void FillMovesList()
     {
         WhiteTurn = !WhiteTurn;
-        //ForcedPieces.Clear();
         foreach (var player in Players)
             if (player.IsWhite == WhiteTurn)
                 piecesHandler = player.GetComponent<PlayerPiecesHandler>();
@@ -69,12 +67,6 @@ public class TurnsHandler : NetworkBehaviour
         else if (this is TurnsHandlerLocal)
         {
             OnGameOver?.Invoke(WhiteTurn ? WHITE_WIN : BLACK_WIN);
-        }
-        else if (this is TurnsHandlerNetworked)
-        {
-            foreach (PlayerNetwork player in Players)
-                if (player.IsWhite == WhiteTurn)
-                    OnGameOver?.Invoke($"Победитель: {player.DisplayName}!");
         }
     }
 
@@ -94,16 +86,15 @@ public class TurnsHandler : NetworkBehaviour
             {
                 List<Move> listToFill = moves;
                 if (pieceMoves[0].IsForcedMove)
-                {
                     listToFill = forcedMoves;
-                    //ForcedPieces.Add(piece);
-                }
                 foreach (var move in pieceMoves)
                     listToFill.Add(move);
             }
         }
-        if (forcedMoves.Count > 0) Moves = forcedMoves;
-        else Moves = moves;
+        if (forcedMoves.Count > 0)
+            Moves = forcedMoves;
+        else
+            Moves = moves;
         OnMovesGenerated?.Invoke();
     }
 }

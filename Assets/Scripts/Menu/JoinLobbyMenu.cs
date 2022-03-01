@@ -10,35 +10,8 @@ public class JoinLobbyMenu : MonoBehaviour
     [SerializeField] InputField addressInput;
     [SerializeField] Button joinButton;
 
-    void OnEnable()
-    {
-        CheckersNetworkManager.ClientOnConnected += HandleClientConnected;
-        CheckersNetworkManager.ClientOnDisconnected += HandleClientDisconnected;
-    }
-
-    void OnDisable()
-    {
-        CheckersNetworkManager.ClientOnConnected -= HandleClientConnected;
-        CheckersNetworkManager.ClientOnDisconnected -= HandleClientDisconnected;
-    }
-
     public void Join()
     {
-        string address = addressInput.text;
-        NetworkManager.singleton.networkAddress = address;
-        NetworkManager.singleton.StartClient();
-        joinButton.interactable = false;
-    }
-
-    void HandleClientConnected()
-    {
-        joinButton.interactable = true;
-        gameObject.SetActive(false);
-        onlinePage.SetActive(false);
-    }
-
-    void HandleClientDisconnected()
-    {
-        joinButton.interactable = true;
+        
     }
 }

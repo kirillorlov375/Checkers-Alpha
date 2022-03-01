@@ -5,7 +5,6 @@ using UnityEngine;
 public class PieceMovesGenerator : MonoBehaviour
 {
     [SerializeField] PieceInfo piece;
-    //public bool ForcedToMove { get; set; }
 
     public List<Move> GenerateMoves(Vector2Int startPosition,
         List<Vector2Int> visited, bool freeMovement = true)
@@ -25,7 +24,6 @@ public class PieceMovesGenerator : MonoBehaviour
             if (move.IsForcedMove) forcedMoves.Add(move);
         if (forcedMoves.Count > 0)
         {
-            //ForcedToMove = true;
             return forcedMoves;
         }
         return moves;
