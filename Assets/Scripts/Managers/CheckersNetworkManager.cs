@@ -8,5 +8,6 @@ using UnityEngine.SceneManagement;
 
 public class CheckersNetworkManager : NetworkManager
 {
-    
+    [SerializeField] GameObject gameOverHandlerPrefab, boardPrefab, 
+        turnsHandlerPrefab;
 }

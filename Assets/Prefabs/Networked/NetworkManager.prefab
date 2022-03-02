@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7637249506820753993}
   - component: {fileID: 6368567407592681375}
   - component: {fileID: 4400972447618757194}
-  - component: {fileID: 898713528711264516}
+  - component: {fileID: -6605805952453982894}
   m_Layer: 0
   m_Name: NetworkManager
   m_TagString: Untagged
@@ -51,7 +51,7 @@ MonoBehaviour:
   serverTickRate: 30
   offlineScene: Assets/Scenes/Lobby Scene.unity
   onlineScene: 
-  transport: {fileID: 898713528711264516}
+  transport: {fileID: 4400972447618757194}
   networkAddress: localhost
   maxConnections: 100
   authenticator: {fileID: 0}
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7637249506820753998}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b0fecffa3f624585964b0d0eb21b18e, type: 3}
   m_Name: 
@@ -96,14 +96,14 @@ MonoBehaviour:
   debugLog: 0
   statisticsGUI: 0
   statisticsLog: 0
---- !u!114 &898713528711264516
+--- !u!114 &-6605805952453982894
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7637249506820753998}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6e55fca1f4e4844593a3dd65a3ecb39, type: 3}
   m_Name: 
