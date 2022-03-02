@@ -10,4 +10,9 @@ public class ManagerSpawner : MonoBehaviour
     {
         Instantiate(localGameManagerPrefab);
     }
+
+    public void SpawnNetworkManager()
+    {
+
+    }
 }
