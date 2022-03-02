@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localGameManagerPrefab: {fileID: 8223577555357173712, guid: cdb1c908ad475cf41a5becb9dc619da0, type: 3}
+  networkManagerPrefab: {fileID: 7637249506820753998, guid: 424111ceb1823574fa2576350b47c6c5, type: 3}
 --- !u!4 &446036620
 Transform:
   m_ObjectHideFlags: 0
