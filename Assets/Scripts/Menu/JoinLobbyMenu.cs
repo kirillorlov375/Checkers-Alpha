@@ -8,10 +8,26 @@ public class JoinLobbyMenu : MonoBehaviour
 {
     [SerializeField] GameObject onlinePage;
     [SerializeField] InputField addressInput;
-    [SerializeField] Button joinButton;
+
+    void Start()
+    {
+        CheckersNetworkManager.ClientOnConnected += HandleClientConnected;
+    }
+
+    void OnDestroy()
+    {
+        CheckersNetworkManager.ClientOnConnected -= HandleClientConnected;
+    }
+
+    void HandleClientConnected()
+    {
+        onlinePage.SetActive(false);
+        gameObject.SetActive(false);
+    }
 
     public void Join()
     {
-        
+        NetworkManager.singleton.networkAddress = addressInput.text;
+        NetworkManager.singleton.StartClient();
     }
 }
