@@ -8,7 +8,6 @@ public class JoinLobbyMenu : MonoBehaviour
 {
     [SerializeField] GameObject onlinePage;
     [SerializeField] InputField addressInput;
-    [SerializeField] Button joinButton;
 
     public void Join()
     {
