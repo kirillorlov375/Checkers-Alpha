@@ -7,7 +7,6 @@ using UnityEngine.UI;
 
 public class LobbyMenu : MonoBehaviour
 {
-    [SerializeField] GameObject lobbyUI;
     [SerializeField] Button startGameButton;
     [SerializeField] Text[] playerNameTexts = new Text[2];
 
