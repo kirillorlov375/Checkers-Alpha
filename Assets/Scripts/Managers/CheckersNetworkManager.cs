@@ -20,7 +20,7 @@ public class CheckersNetworkManager : NetworkManager
         NetworkServer.AddPlayerForConnection(conn, playerInstance);
         var player = playerInstance.GetComponent<PlayerNetwork>();
         NetworkPlayers.Add(player);
-        player.IsWhite = numPlayers == 1;
+        player.LobbyOwner = player.IsWhite = numPlayers == 1;
         player.DisplayName = player.IsWhite ? "Светлый" : "Тёмный";
     }
 
