@@ -100,6 +100,7 @@ GameObject:
   - component: {fileID: 6012433781486249098}
   - component: {fileID: 3572071764651845456}
   - component: {fileID: 283506569077013627}
+  - component: {fileID: 6767119333747144580}
   m_Layer: 6
   m_Name: Piece
   m_TagString: Untagged
@@ -232,18 +233,7 @@ MonoBehaviour:
   audioSource: {fileID: 6012433781486249098}
   clips:
   - {fileID: 8300000, guid: b821f2f01af50e448ba2b434599d7277, type: 3}
-  - {fileID: 8300000, guid: 687f5f1aa5fab164dbe7ef3471298930, type: 3}
-  - {fileID: 8300000, guid: b02a21d8555c9374fa0763db5dea6031, type: 3}
-  - {fileID: 8300000, guid: bf17c74e923583247a586c927c5cba86, type: 3}
-  - {fileID: 8300000, guid: e7b228d827aaeaa489406457e689f479, type: 3}
-  - {fileID: 8300000, guid: bdde6ae42d4ae2643b2475958aa68b5f, type: 3}
-  - {fileID: 8300000, guid: 43f5de429a853bf47a6e651c587cf8d3, type: 3}
-  - {fileID: 8300000, guid: b6db156972a228344a2e71bfe9ae5580, type: 3}
-  - {fileID: 8300000, guid: a4d36847306bee7438fe2f710bc17f8e, type: 3}
   - {fileID: 8300000, guid: 024aefd9eeb38c147aaac4acc89e3f07, type: 3}
-  - {fileID: 8300000, guid: cfff8aab88ffea14a831878fbc44394f, type: 3}
-  - {fileID: 8300000, guid: b736251e41e4b2b489a524cfc71cf199, type: 3}
-  - {fileID: 8300000, guid: f367b9abd48c0854d8ad9ef487d31e80, type: 3}
   volume: 0.2
 --- !u!82 &6012433781486249098
 AudioSource:
@@ -375,6 +365,23 @@ MonoBehaviour:
   syncInterval: 0.1
   piece: {fileID: -8102194196313459873}
   modelTransform: {fileID: 4247236229076489432}
+--- !u!114 &6767119333747144580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9210903425486688901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 0
+  serverOnly: 0
+  visible: 0
+  m_AssetId: 29848555bba18744ab28bdde1cf75df4
+  hasSpawned: 0
 --- !u!1001 &2506766672314592531
 PrefabInstance:
   m_ObjectHideFlags: 0
