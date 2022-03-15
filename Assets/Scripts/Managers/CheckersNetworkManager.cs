@@ -14,6 +14,23 @@ public class CheckersNetworkManager : NetworkManager
 
     public static event Action ClientOnConnected;
 
+    public override void OnStartServer()
+    {
+        var boardInstance = Instantiate(boardPrefab);
+        NetworkServer.Spawn(boardInstance);
+        var turnsHandlerInstance = Instantiate(turnsHandlerPrefab);
+        NetworkServer.Spawn(turnsHandlerInstance);
+    }
+
+    public override void OnServerSceneChanged(string sceneName)
+    {
+        if (sceneName.StartsWith("Game"))
+        {
+            var gameOverHandlerInstance = Instantiate(gameOverHandlerPrefab);
+            NetworkServer.Spawn(gameOverHandlerInstance);
+        }
+    }
+
     public override void OnServerAddPlayer(NetworkConnection conn)
     {
         GameObject playerInstance = Instantiate(playerPrefab);
