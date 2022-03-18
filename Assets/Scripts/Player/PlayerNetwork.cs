@@ -40,12 +40,16 @@ public class PlayerNetwork : Player
         AuthorityOnLobbyOwnerStateUpdated?.Invoke(newState);
     }
 
+    void Start()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
     public override void OnStartClient()
     {
         if (!isClientOnly)
             return;
-        ((CheckersNetworkManager)NetworkManager.singleton).
-            NetworkPlayers.Add(this);
+        ((CheckersNetworkManager)NetworkManager.singleton).NetworkPlayers.Add(this);
     }
 
     public override void OnStopClient()
