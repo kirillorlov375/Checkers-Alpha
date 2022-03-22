@@ -59,4 +59,10 @@ public class PlayerNetwork : Player
                 NetworkPlayers.Remove(this);
         ClientOnInfoUpdated?.Invoke();
     }
+
+    [Command]
+    public void CmdNextTurn()
+    {
+        TurnsHandler.Instance.NextTurn();
+    }
 }

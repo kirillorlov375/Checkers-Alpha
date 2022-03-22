@@ -11,6 +11,7 @@ public class CheckersNetworkManager : NetworkManager
     [SerializeField] GameObject gameOverHandlerPrefab, boardPrefab, 
         turnsHandlerPrefab;
     public List<PlayerNetwork> NetworkPlayers = new List<PlayerNetwork>();
+    public List<Player> Players = new List<Player>();
 
     public static event Action ClientOnConnected;
     public static event Action ServerOnGameStarted;
@@ -39,6 +40,7 @@ public class CheckersNetworkManager : NetworkManager
         NetworkServer.AddPlayerForConnection(conn, playerInstance);
         var player = playerInstance.GetComponent<PlayerNetwork>();
         NetworkPlayers.Add(player);
+        Players.Add(player);
         player.LobbyOwner = player.IsWhite = numPlayers == 1;
         player.DisplayName = player.IsWhite ? "Светлый" : "Тёмный";
     }
@@ -47,12 +49,14 @@ public class CheckersNetworkManager : NetworkManager
     {
         var player = conn.identity.GetComponent<PlayerNetwork>();
         NetworkPlayers.Remove(player);
+        Players.Remove(player);
         base.OnServerDisconnect(conn);
     }
 
     public override void OnStopServer()
     {
         NetworkPlayers.Clear();
+        Players.Clear();
     }
 
     public override void OnClientConnect()
