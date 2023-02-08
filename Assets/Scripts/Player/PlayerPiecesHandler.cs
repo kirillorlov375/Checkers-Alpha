@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerPiecesHandler : NetworkBehaviour
+public abstract class PlayerPiecesHandler : NetworkBehaviour
 {
     [Header("Components")]
     [SerializeField] protected Player player;

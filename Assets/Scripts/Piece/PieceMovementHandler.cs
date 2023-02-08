@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PieceMovementHandler : NetworkBehaviour
+public abstract class PieceMovementHandler : NetworkBehaviour
 {
     [SerializeField] protected PieceInfo pieceInfo;
     [SerializeField] protected PieceSelectionHandler selectionHandler;

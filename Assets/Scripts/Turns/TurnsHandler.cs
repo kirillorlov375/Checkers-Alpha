@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TurnsHandler : NetworkBehaviour
+public abstract class TurnsHandler : NetworkBehaviour
 {
     protected const string DRAW = "Ничья!";
     protected const string WHITE_WIN = "Победитель: Светлый!";
