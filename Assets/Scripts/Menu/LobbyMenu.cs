@@ -34,7 +34,7 @@ public class LobbyMenu : MonoBehaviour
         for (int i = 0; i < players.Count; i++)
             playerNameTexts[i].text = players[i].DisplayName;
         for (int i = players.Count; i < playerNameTexts.Length; i++)
-            playerNameTexts[i].text = "Æäåì èãðîêà...";
+            playerNameTexts[i].text = "Ð–Ð´ÐµÐ¼ Ð¸Ð³Ñ€Ð¾ÐºÐ°...";
         startGameButton.interactable = players.Count >= 2;
     }
 

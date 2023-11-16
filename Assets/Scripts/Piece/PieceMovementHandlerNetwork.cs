@@ -37,4 +37,13 @@ public class PieceMovementHandlerNetwork : PieceMovementHandler
     {
         base.Capture(piecePosition);
     }
+
+    [ClientRpc]
+    void RpcPlayAudio() {
+        base.PlayAudio();
+    }
+
+    protected override void PlayAudio() {
+        RpcPlayAudio();
+    }
 }
