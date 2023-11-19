@@ -6,9 +6,9 @@ using UnityEngine;
 
 public class TurnsHandler : NetworkBehaviour
 {
-    protected const string DRAW = "Ничья!";
-    protected const string WHITE_WIN = "Победитель: Светлый!";
-    protected const string BLACK_WIN = "Победитель: Тёмный!";
+    protected const string DRAW = "пїЅпїЅпїЅпїЅпїЅ!";
+    protected const string WHITE_WIN = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅпїЅпїЅпїЅпїЅпїЅ!";
+    protected const string BLACK_WIN = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: ТёпїЅпїЅпїЅпїЅ!";
 
     public bool WhiteTurn { get; protected set; }
     public List<Move> Moves { get; protected set; } = new List<Move>();
@@ -67,6 +67,14 @@ public class TurnsHandler : NetworkBehaviour
         else if (this is TurnsHandlerLocal)
         {
             OnGameOver?.Invoke(WhiteTurn ? WHITE_WIN : BLACK_WIN);
+        }
+        else if (this is TurnsHandlerNetworked) {
+            foreach (var player in Players)
+            {
+                if(player.isWhite == WhiteTurn) {
+                    OnGameOver?.Invoke($"РџРѕР±РµРґРёС‚РµР»СЊ: {player.DisplayName}");
+                }
+            }
         }
     }
 

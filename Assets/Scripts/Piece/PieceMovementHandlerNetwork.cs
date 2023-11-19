@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class PieceMovementHandlerNetwork : PieceMovementHandler
 {
+    public static event Func<PiecePromotionHandler, int, int, bool> OnPieceReachedBackline;
+
     public override void OnStartAuthority()
     {
         TilesSelectionHandler.OnTileSelected += HandleTileSelected;
@@ -19,6 +21,10 @@ public class PieceMovementHandlerNetwork : PieceMovementHandler
     protected override void Move(Vector3 position, bool nextTurn)
     {
         CmdMove(position, nextTurn);
+    }
+
+    protected override void ReachedBackline(Vector2Int newPosition) {
+        OnPieceReachedBackline?.Invoke(promotionHandler, newPosition.x, newPosition.y);
     }
 
     [Command]
