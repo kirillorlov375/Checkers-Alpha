@@ -1,0 +1,113 @@
+[33mcommit e34be4eb28c3989b17936147d304b14c3b89bf88[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mLesson-3[m[33m, [m[1;32mHomework[m[33m)[m
+Author: kirillorlov375 <k.a.orlov09@gmail.com>
+Date:   Sun Nov 19 13:55:42 2023 +0300
+
+    Захват шашек, окончание игры (частично))
+
+[33mcommit 577d9731a30cddab522d07692b2ed60818f3a161[m
+Author: kirillorlov375 <k.a.orlov09@gmail.com>
+Date:   Thu Nov 16 16:57:02 2023 +0300
+
+    Capture
+
+[33mcommit 9cb6e47769fad74db7bd42a442f684a067108771[m
+Author: evbishop <anddenissyuk@gmail.com>
+Date:   Wed Mar 23 11:30:22 2022 +0600
+
+    Шашки в иерархии клиента
+
+[33mcommit d91cae5648159de32243253599e9a3e117211890[m
+Author: evbishop <anddenissyuk@gmail.com>
+Date:   Tue Mar 22 17:34:18 2022 +0600
+
+    Список обычных игроков, подсветка клеток готова
+
+[33mcommit c10ab012b2470ec6097b7b2b1231608b52131962[m[33m ([m[1;32mLesson-2[m[33m)[m
+Author: evbishop <anddenissyuk@gmail.com>
+Date:   Fri Mar 18 10:44:42 2022 +0600
+
+    Спавн всех шашек
+
+[33mcommit 5bedfa672fdb9408aca0262127e8dcd70f53d1b9[m
+Author: evbishop <anddenissyuk@gmail.com>
+Date:   Tue Mar 15 13:06:07 2022 +0600
+
+    Спавн обработчиков
+
+[33mcommit 31702a26afa502af5ebda69a04e84ddd76931142[m
+Author: evbishop <anddenissyuk@gmail.com>
+Date:   Tue Mar 15 12:16:58 2022 +0600
+
+    Запуск игровой сцены
+
+[33mcommit 454b42c84911c489b510b167c812c849a4cf63c8[m
+Author: evbishop <anddenissyuk@gmail.com>
+Date:   Wed Mar 9 11:54:16 2022 +0600
+
+    Audio
+
+[33mcommit 12fac80e2d60eb6deb7cec085540b8c2700519d8[m
+Author: evbishop <anddenissyuk@gmail.com>
+Date:   Sat Mar 5 12:44:14 2022 +0600
+
+    Отображение кнопки запуска игры
+
+[33mcommit e834926d44888d2f0fe4eed3191884da23aba722[m
+Author: evbishop <anddenissyuk@gmail.com>
+Date:   Fri Mar 4 18:55:12 2022 +0600
+
+    Отображение имен игроков в лобби
+
+[33mcommit de9f80fd64c9ca3db03649fa09da0c9d07fccd34[m
+Author: evbishop <anddenissyuk@gmail.com>
+Date:   Thu Mar 3 13:49:33 2022 +0600
+
+    Хостинг игры и подключение клиента
+
+[33mcommit 17fd8974663f7a32e38ee20bcfbdfdbfc97f6e5f[m
+Author: evbishop <anddenissyuk@gmail.com>
+Date:   Wed Mar 2 15:04:34 2022 +0600
+
+    Кнопка выхода в режим оффлайн
+
+[33mcommit 40ae21ee1a924b5e0a31bd662597253cddf9c80c[m
+Author: evbishop <anddenissyuk@gmail.com>
+Date:   Wed Mar 2 14:15:12 2022 +0600
+
+    Спавн менеджера сети
+
+[33mcommit bb6c2c05a8b6f3c4b4e16e61e4ed7c84e9ce2788[m
+Author: evbishop <anddenissyuk@gmail.com>
+Date:   Wed Mar 2 14:14:07 2022 +0600
+
+    Returned net manager serialized fields and switched it to kcp transport
+
+[33mcommit d2160601304c7152034a72a89ed46862a39f71f2[m
+Author: evbishop <anddenissyuk@gmail.com>
+Date:   Wed Mar 2 13:59:48 2022 +0600
+
+    Returned serialized field for net manager
+
+[33mcommit a745c9ba335adba39802a6f321fe07a4838b35ca[m
+Author: evbishop <anddenissyuk@gmail.com>
+Date:   Wed Mar 2 13:49:13 2022 +0600
+
+    Returned spawn network manager function definition
+
+[33mcommit 3737e21ea172884a1abf62be752cea6a700b2192[m
+Author: evbishop <anddenissyuk@gmail.com>
+Date:   Tue Mar 1 18:07:31 2022 +0600
+
+    No net code
+
+[33mcommit eba09846b2fafb5c900b3b1c2456ae57f0986243[m
+Author: evbishop <anddenissyuk@gmail.com>
+Date:   Tue Mar 1 13:56:48 2022 +0600
+
+    Finished project
+
+[33mcommit 99f641f6dbc55fdac1cb055ec89669e37dfc77d0[m
+Author: evbishop <anddenissyuk@gmail.com>
+Date:   Tue Mar 1 13:53:25 2022 +0600
+
+    Initial commit
