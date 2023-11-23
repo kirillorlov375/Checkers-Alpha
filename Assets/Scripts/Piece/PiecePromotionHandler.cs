@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PiecePromotionHandler : NetworkBehaviour
+public abstract class PiecePromotionHandler : NetworkBehaviour
 {
     [SerializeField] protected PieceInfo piece;
     [SerializeField] protected Transform modelTransform;

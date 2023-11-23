@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Board : NetworkBehaviour
+public abstract class Board : NetworkBehaviour
 {
     public virtual IList<int[]> BoardList { get; }
 
